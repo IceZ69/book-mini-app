@@ -27,15 +27,12 @@ p {
 button {
     background-color: #007bff;
     color: white;
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    max-width: 300px;
-    font-size: 16px;
-    display: block;
-    margin: 10px auto;
+    font-size: 14px;
+    margin: 5px;
 }
 
 .book-grid {
@@ -54,8 +51,8 @@ button {
 
 .book-item img {
     width: 160px;
-    height: 256px; /* Vertical book cover ratio (640x1000 scaled) */
-    object-fit: cover; /* Prevents distortion */
+    height: 256px;
+    object-fit: cover;
 }
 
 .book-title {
@@ -75,11 +72,20 @@ a {
     display: block;
 }
 
-#book-viewer {
-    margin-top: 20px;
+#reader-container {
+    text-align: center;
+    max-width: 100%;
 }
 
-#pdf-viewer {
-    border: none;
+#pdf-controls {
+    margin: 10px 0;
+}
+
+#pdf-canvas {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 0 auto;
 }
