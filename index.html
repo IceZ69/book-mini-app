@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAV Mini App</title>
-    <link rel="stylesheet" href="style.css">  <!-- Links to your CSS -->
-    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>  <!-- Telegram script -->
-    <script src="script.js" defer></script>  <!-- Your JS, "defer" loads it after HTML -->
+    <title>JAV Myanmar Book Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="age-gate">
-        <h1>Welcome! This is 18+ Content</h1>
-        <p>You must verify your age to continue.</p>
-        <button id="verify-button">Verify Age</button>
+    <h1>JAV Myanmar Book Library</h1>
+    <p>Explore our 18+ book collection</p>
+    <div class="book-grid">
+        <!-- Static book entry -->
+        <div class="book-item">
+            <a href="https://javmyanmar.com/books/sample-book.pdf" target="_blank">
+                <img src="https://javmyanmar.com/images/book-cover.jpg" alt="Sample Adult Book">
+                <p class="book-title">Sample Adult Book</p>
+            </a>
+        </div>
+        <!-- Add more books here -->
     </div>
-    <div id="content" style="display: none;">  <!-- Hidden until verified -->
-        <h1>Your JAV Videos</h1>
-        <p>Click to visit your website:</p>
-        <a href="https://javmyanmar.com" target="_blank">Go to Site</a>
-        <!-- Add more links or previews here -->
-    </div>
+    <div id="dynamic-content" class="book-grid"></div>
 </body>
 </html>
