@@ -2,26 +2,61 @@ body {
     margin: 0;
     padding: 20px;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;  /* Light gray, we'll adapt to Telegram theme in JS */
-    color: #000;  /* Black text */
+    background-color: #f0f0f0;
+    color: #000;
 }
 
 h1 {
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-button {
-    background-color: blue;
-    color: white;
+p {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
     padding: 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+}
+
+.book-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-item img {
+    width: 150px;
+    height: 240px; /* Book cover ratio (640x1000 scaled) */
+    object-fit: cover; /* Prevents distortion */
+    filter: blur(5px); /* Blur for NSFW compliance */
+    transition: filter 0.3s;
+}
+
+.book-item img:hover {
+    filter: none; /* Unblur on hover/tap */
+}
+
+.book-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    margin: 8px 5px;
+    text-align: center;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevents title wrapping */
 }
 
 a {
+    text-decoration: none;
     display: block;
-    text-align: center;
-    color: blue;
-    margin-top: 20px;
 }
