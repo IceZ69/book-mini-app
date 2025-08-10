@@ -12,15 +12,35 @@ h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
 p {
     text-align: center;
     margin: 10px 0;
     font-size: 14px;
 }
 
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+}
+
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 15px;
     padding: 10px;
 }
@@ -33,15 +53,9 @@ p {
 }
 
 .book-item img {
-    width: 150px;
-    height: 240px; /* Book cover ratio (640x1000 scaled) */
+    width: 160px;
+    height: 256px; /* Vertical book cover ratio (640x1000 scaled) */
     object-fit: cover; /* Prevents distortion */
-    filter: blur(5px); /* Blur for NSFW compliance */
-    transition: filter 0.3s;
-}
-
-.book-item img:hover {
-    filter: none; /* Unblur on hover/tap */
 }
 
 .book-title {
@@ -53,10 +67,19 @@ p {
     line-height: 1.2;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; /* Prevents title wrapping */
+    white-space: nowrap;
 }
 
 a {
     text-decoration: none;
     display: block;
+}
+
+#book-viewer {
+    margin-top: 20px;
+}
+
+#pdf-viewer {
+    border: none;
+    border-radius: 5px;
 }
