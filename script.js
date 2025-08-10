@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const item = document.createElement('div');
                 item.className = 'book-item';
                 item.innerHTML = `
-                    <a href="${book.url}" target="_blank">
+                    <a href="#book-viewer" onclick="showBook('${book.url}')">
                         <img src="${book.cover}" alt="${book.title}">
                         <p class="book-title">${book.title}</p>
                     </a>
@@ -28,3 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching books:', error));
     */
 });
+
+// Show PDF in viewer
+function showBook(pdfUrl) {
+    document.getElementById('book-viewer').style.display = 'block';
+    document.getElementById('pdf-viewer').src = pdfUrl;
+    document.getElementById('download-link').href = pdfUrl;
+    window.scrollTo(0, document.getElementById('book-viewer').offsetTop);
+}
+
+// Close PDF viewer
+function closeBook() {
+    document.getElementById('book-viewer').style.display = 'none';
+    document.getElementById('pdf-viewer').src = '';
+}
