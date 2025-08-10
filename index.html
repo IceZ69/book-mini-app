@@ -13,6 +13,12 @@
     <p>Explore our 18+ book collection</p>
     <div class="book-grid">
         <!-- Static book entry -->
+        <<div class="book-item">
+            <a href="hhttps://javmyanmar.com/wp-content/uploads/2025/08/Untitled-document-1.pdf" target="_blank">
+                <img src="hhttps://javmyanmar.com/wp-content/uploads/2025/08/OIP.webp" alt="Sample Adult Book">
+                <p class="book-title">သူငယ်ချင်းမို့ပါ</p>
+            </a>
+        </div>
         <div class="book-item">
             <a href="hhttps://javmyanmar.com/wp-content/uploads/2025/08/Untitled-document-1.pdf" target="_blank">
                 <img src="hhttps://javmyanmar.com/wp-content/uploads/2025/08/OIP.webp" alt="Sample Adult Book">
@@ -70,6 +76,12 @@
         <!-- Add more books here -->
     </div>
     <div id="dynamic-content" class="book-grid"></div>
+    <!-- PDF viewer -->
+    <div id="book-viewer" style="display: none;">
+        <h2>Reading Book</h2>
+        <iframe id="pdf-viewer" src="" width="100%" height="500px"></iframe>
+        <p><a href="#" id="download-link" target="_blank">Download PDF</a></p>
+        <button onclick="closeBook()">Close Viewer</button>
+    </div>
 </body>
 </html>
-
